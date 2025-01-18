@@ -28,18 +28,22 @@ struct RecipesView: View {
                 switch viewModel.state {
                 case .loading:
                     RecipeLoadingView()
-                case .emptyData:
-                    Text("Empty Data")
-                case .malformedData:
-                    Text("Malformed Data")
-                case .networkError:
-                    Text("Network Error")
                 case .loaded:
-                    RecipeListView(recipes: filteredRecipes)
+                    Group {
+                        if filteredRecipes.isEmpty {
+                            ContentUnavailableView.search(text: searchText)
+                        } else {
+                            RecipeListView(recipes: filteredRecipes)
+                        }
+                    }
+                    .searchable(text: $searchText)
+                default:
+                    RecipeErrorView(errorState: viewModel.state) {
+                        await viewModel.fetchRecipes()
+                    }
                 }
             }
             .navigationTitle("Recipes")
-            .searchable(text: $searchText)
             .refreshable {
                 await viewModel.fetchRecipes()
             }

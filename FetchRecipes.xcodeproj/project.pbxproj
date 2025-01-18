@@ -18,6 +18,7 @@
 		0AB77CF32D3C1EE900BD7064 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB77CF22D3C1EE900BD7064 /* RecipeListView.swift */; };
 		0AB77CF52D3C202200BD7064 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB77CF42D3C202200BD7064 /* RecipeRow.swift */; };
 		0AB77CF72D3C313B00BD7064 /* RecipeLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB77CF62D3C313B00BD7064 /* RecipeLoadingView.swift */; };
+		0AB77CFB2D3C3D8E00BD7064 /* RecipeErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB77CFA2D3C3D8E00BD7064 /* RecipeErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0AB77CF22D3C1EE900BD7064 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		0AB77CF42D3C202200BD7064 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
 		0AB77CF62D3C313B00BD7064 /* RecipeLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLoadingView.swift; sourceTree = "<group>"; };
+		0AB77CFA2D3C3D8E00BD7064 /* RecipeErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -127,8 +129,9 @@
 			children = (
 				0AB77CDD2D3C05DD00BD7064 /* RecipesView.swift */,
 				0AB77CF22D3C1EE900BD7064 /* RecipeListView.swift */,
-				0AB77CF62D3C313B00BD7064 /* RecipeLoadingView.swift */,
 				0AB77CF42D3C202200BD7064 /* RecipeRow.swift */,
+				0AB77CF62D3C313B00BD7064 /* RecipeLoadingView.swift */,
+				0AB77CFA2D3C3D8E00BD7064 /* RecipeErrorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				0AB77CE62D3C05DD00BD7064 /* RecipesView.swift in Sources */,
 				0AB77CF52D3C202200BD7064 /* RecipeRow.swift in Sources */,
 				0AB77CE72D3C05DD00BD7064 /* RecipesViewModel.swift in Sources */,
+				0AB77CFB2D3C3D8E00BD7064 /* RecipeErrorView.swift in Sources */,
 				0AB77CE82D3C05DD00BD7064 /* FetchRecipesApp.swift in Sources */,
 				0AB77CEF2D3C0E0A00BD7064 /* ImageCacheService.swift in Sources */,
 				0AB77CF32D3C1EE900BD7064 /* RecipeListView.swift in Sources */,
@@ -481,6 +485,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,6 +515,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

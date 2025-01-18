@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct RecipeLoadingView: View {
-    var body: some View {
-        ForEach(1..<10) { _ in
-            RecipeRow(recipe: Recipe.placeholder)
+    let recipes: [Recipe] = {
+        var recipes: [Recipe] = []
+        for _ in 0..<10 {
+            recipes.append(Recipe(
+                uuid: UUID().uuidString,
+                cuisine: String(repeating: "X", count: 10),
+                name: String(repeating: "X", count: 10)))
         }
-        .redacted(reason: .placeholder)
+        return recipes
+    }()
+    
+    var body: some View {
+        HStack {
+            List(recipes) { recipe in
+                RecipeRow(recipe: recipe)
+                    .redacted(reason: .placeholder)
+            }
+        }
+        
     }
 }
 
