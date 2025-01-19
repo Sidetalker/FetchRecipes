@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
     case invalidResponse(_ statusCode: Int)
     case badData
 }
