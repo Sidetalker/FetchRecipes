@@ -12,6 +12,7 @@ struct RecipeRow: View {
     
     var recipe: Recipe
     
+    @Environment(\.openURL) var openURL
     @State private var smallImage: UIImage?
     @State private var largeImage: UIImage?
     private let placeholderImage: UIImage = #imageLiteral(resourceName: "recipePlaceholder")
@@ -20,20 +21,45 @@ struct RecipeRow: View {
     }
     
     var body: some View {
-        HStack {
-            Image(uiImage: recipeImage)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 50, height: 50)
-                .clipShape(.rect(cornerRadius: 10))
-            VStack(alignment: .leading) {
-                Text(recipe.name)
-                    .font(.headline)
-                Text(recipe.cuisine)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+        DisclosureGroup {
+            HStack {
+                Spacer()
+                if let youtubeUrl = recipe.youtubeUrl {
+                    Image(uiImage: #imageLiteral(resourceName: "youtubeLogo"))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 20)
+                        .onTapGesture {
+                            openURL(youtubeUrl)
+                        }
+                    Spacer()
+                }
+                if let recipeUrl = recipe.sourceUrl {
+                    Button("View Recipe") {
+                        openURL(recipeUrl)
+                    }
+                    .buttonStyle(.bordered)
+                    Spacer()
+                }
             }
-            .padding(10)
+        } label: {
+            HStack {
+                Image(uiImage: recipeImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 50, height: 50)
+                    .clipShape(.rect(cornerRadius: 10))
+                VStack(alignment: .leading) {
+                    Text(recipe.name)
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                    Text(recipe.cuisine)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                .padding(10)
+                Spacer()
+            }
         }
         .task {
             if let smallUrl = recipe.photoUrlSmall {

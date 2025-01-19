@@ -41,6 +41,7 @@
 		0A6F42162D3D6B9E004261E5 /* ImageCacheServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheServiceTests.swift; sourceTree = "<group>"; };
 		0A6F42182D3D6BD1004261E5 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		0A6F421A2D3D7C52004261E5 /* RecipesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModelTests.swift; sourceTree = "<group>"; };
+		0A6F421E2D3D8C07004261E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0AB77CA42D3C02B500BD7064 /* FetchRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB77CB42D3C02B500BD7064 /* FetchRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB77CDA2D3C05DD00BD7064 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		0AB77CE32D3C05DD00BD7064 /* FetchRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				0A6F421E2D3D8C07004261E5 /* Info.plist */,
 				0AB77CDB2D3C05DD00BD7064 /* Preview Content */,
 				0AB77CDF2D3C05DD00BD7064 /* View */,
 				0AB77CE02D3C05DD00BD7064 /* View Model */,
@@ -448,6 +450,7 @@
 				DEVELOPMENT_TEAM = S7BT87895F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetchRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +481,7 @@
 				DEVELOPMENT_TEAM = S7BT87895F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetchRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

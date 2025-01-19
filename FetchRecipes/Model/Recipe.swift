@@ -31,7 +31,9 @@ struct Recipe: Codable, Identifiable {
     
     static let placeholder = Recipe(uuid: NSUUID().uuidString,
                                     cuisine: String(repeating: "X", count: 10),
-                                    name: String(repeating: "X", count: 10))
+                                    name: String(repeating: "X", count: 10),
+                                    sourceUrl: URL(string: "https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ"),
+                                    youtubeUrl: URL(string: "https://www.youtube.com/watch?v=6R8ffRRJcrg"))
 }
 
 struct RecipeResponse: Codable {
