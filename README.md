@@ -20,9 +20,9 @@ I prioritized a clean MVVM architecture and implementing extensible services in 
 ## Time Spent: Approximately how long did you spend working on this project? How did you allocate your time?
 
 ~6 hours
-3 hours: Base implementation of UI, model, and service classes
-1.5 hours: Testing
-1.5 hours: Exploring options for adding features (time burned trying to get embedded youtube videos to play)
+* 3 hours: Base implementation of UI, model, and service classes
+* 1.5 hours: Testing
+* 1.5 hours: Exploring options for adding features (time burned trying to get embedded youtube videos to play)
 
 ## Trade-offs and Decisions: Did you make any significant trade-offs in your approach?
 
